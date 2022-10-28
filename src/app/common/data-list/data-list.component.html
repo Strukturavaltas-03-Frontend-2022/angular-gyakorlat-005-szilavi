@@ -5,17 +5,16 @@
     <span class="text-bold">email</span>
     <span class="text-bold">address</span>
     <span class="text-bold">active</span>
-    ...
   </div>
 </div>
 <div class="row">
   <div class="col-12 mt-1 data-list-row">
     <app-data-row
-      [dataRow]="row"
       *ngFor="let row of dataList"
-      (selectClick)="onSelectClick($event)"
-      (updateClick)="onUpdateClick($event)"
-      (deleteClick)="onDeleteClick($event)"
+      [dataRow]="row"
+      (selectClick)="onSelectClick(row)"
+      (updateClick)="onUpdateClick(row)"
+      (deleteClick)="onDeleteClick(row)"
     ></app-data-row>
   </div>
 </div>
